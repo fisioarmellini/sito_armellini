@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import BookingHeroSection from "@/components/BookingHeroSection";
 import ContactCards from "@/components/ContactCards";
-import ProcessSection from "@/components/ProcessSection";
 import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
+import HowItWorksSection from "@/components/HowItWorksSection";
 
 const Prenotazione = () => {
   return (
@@ -11,7 +11,7 @@ const Prenotazione = () => {
       <Header />
       <BookingHeroSection />
       <ContactCards />
-      <ProcessSection />
+      <HowItWorksSection />
       <BookingSection />
       <Footer />
     </div>

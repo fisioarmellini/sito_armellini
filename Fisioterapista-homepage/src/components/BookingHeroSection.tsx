@@ -1,6 +1,7 @@
 const BookingHeroSection = () => {
   return (
-    <section className="bg-accent py-20 px-6 relative overflow-hidden">
+    // Colore sfondo aggiornato da "bg-accent" a "bg-secondary"
+    <section className="bg-secondary py-20 px-6 relative overflow-hidden">
       {/* Decorative graphics */}
       <div className="absolute top-10 right-20 opacity-20">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none">

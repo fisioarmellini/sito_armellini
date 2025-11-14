@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import BlogCard from "@/components/BlogCard";
-import BlogFooter from "@/components/BlogFooter";
+import Footer from "@/components/Footer";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import { Button } from "@/components/ui/button";
 import { Activity, Heart } from "lucide-react";
 import blog1 from "@/assets/blog-1.jpg";
@@ -60,8 +61,8 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-accent relative overflow-hidden">
+      {/* Hero Section (Colore sfondo aggiornato) */}
+      <section className="bg-secondary relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
           <Activity className="absolute top-20 left-[10%] w-32 h-32 text-primary" strokeWidth={1} />
@@ -99,8 +100,11 @@ const Blog = () => {
         </div>
       </section>
 
+      {/* Sezione Aggiunta */}
+      <HowItWorksSection />
+
       {/* Footer */}
-      <BlogFooter />
+      <Footer />
     </div>
   );
 };

@@ -15,7 +15,6 @@ const ChiSono = () => {
         <AboutSection />
         <StatsSection />
         <HowItWorksSection />
-        <CTASection />
       </main>
       <Footer />
     </div>

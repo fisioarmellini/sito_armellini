@@ -4,6 +4,7 @@ import TreatmentsGrid from "@/components/TreatmentsGrid";
 import SuccessCarousel from "@/components/SuccessCarousel";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import HowItWorksSection from "@/components/HowItWorksSection";
 
 const Trattamenti = () => {
   return (
@@ -12,7 +13,7 @@ const Trattamenti = () => {
       <HeroBanner />
       <TreatmentsGrid />
       <SuccessCarousel />
-      <CTASection />
+      <HowItWorksSection />
       <Footer />
     </div>
   );
