@@ -1,6 +1,6 @@
 const BookingSection = () => {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section id="booking" className="py-20 px-6 bg-background">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
           Prenota il tuo appuntamento online

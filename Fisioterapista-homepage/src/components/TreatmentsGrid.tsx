@@ -1,5 +1,6 @@
-import TreatmentCard from "./TreatmentCard";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import TreatmentCard from "./TreatmentCard";
 import shoulderAnatomy from "@/assets/shoulder-anatomy.jpg";
 import spineAnatomy from "@/assets/spine-anatomy.jpg";
 import kneeAnatomy from "@/assets/knee-anatomy.jpg";
@@ -67,21 +68,59 @@ const treatments = [
       "Ottimizzazione performance",
       "Supporto per atleti professionisti"
     ]
+  },
+  {
+    image: shoulderAnatomy,
+    title: "Terapia del Dolore Cronico",
+    benefits: [
+      "Gestione del dolore persistente",
+      "Tecniche di rilassamento",
+      "Miglioramento qualità della vita",
+      "Approccio multidisciplinare"
+    ]
+  },
+  {
+    image: spineAnatomy,
+    title: "Riabilitazione Neurologica",
+    benefits: [
+      "Recupero funzioni motorie",
+      "Stimolazione neuromuscolare",
+      "Esercizi di coordinazione",
+      "Supporto continuo"
+    ]
+  },
+  {
+    image: kneeAnatomy,
+    title: "Fisioterapia Pediatrica",
+    benefits: [
+      "Sviluppo motorio",
+      "Correzione posturale precoce",
+      "Approccio ludico",
+      "Supporto alla crescita"
+    ]
   }
 ];
 
 const TreatmentsGrid = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const displayedTreatments = isExpanded ? treatments : treatments.slice(0, 6);
+
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-8 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {treatments.map((treatment, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayedTreatments.map((treatment, index) => (
             <TreatmentCard key={index} {...treatment} />
           ))}
         </div>
-        <div className="flex justify-center">
-          <Button size="lg" className="rounded-full px-8 font-semibold">
-            Vedi tutti i trattamenti
+        
+        <div className="flex justify-center mt-12">
+          <Button 
+            size="lg" 
+            className="rounded-full px-8"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? "Mostra meno" : "Vedi tutti i trattamenti"}
           </Button>
         </div>
       </div>

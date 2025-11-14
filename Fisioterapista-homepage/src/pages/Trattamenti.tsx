@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
-import HeroBanner from "@/components/HeroBanner";
+import ExpertiseLanding from "@/components/ExpertiseLanding";
+import PatologieHeader from "@/components/PatologieHeader";
+import ConditionsSection from "@/components/ConditionsSection";
+import TrattamentiHeader from "@/components/TrattamentiHeader";
 import TreatmentsGrid from "@/components/TreatmentsGrid";
-import SuccessCarousel from "@/components/SuccessCarousel";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import HowItWorksSection from "@/components/HowItWorksSection";
 
@@ -10,9 +11,11 @@ const Trattamenti = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <HeroBanner />
+      <ExpertiseLanding />
+      <PatologieHeader />
+      <ConditionsSection />
+      <TrattamentiHeader />
       <TreatmentsGrid />
-      <SuccessCarousel />
       <HowItWorksSection />
       <Footer />
     </div>

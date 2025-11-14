@@ -13,15 +13,12 @@ const Header = () => {
   return (
     <header className="bg-background border-b sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-         <img src="/logo_removed.png" alt="Logo" className="w-14 h-8" />
-        </div>
+        <Link to="/" className="flex items-center gap-2">
+         <img src="/logo_removed.png" alt="Logo" className="w-14 h-8 cursor-pointer" />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
-            Home
-          </Link>
           <Link to="/chi-sono" className="text-sm font-medium hover:text-primary transition-colors">
             Chi sono
           </Link>
@@ -35,11 +32,14 @@ const Header = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Link to="/prenotazione">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Contattami
-            </Button>
+          <Link to="/prenotazione" className="text-sm font-medium hover:text-primary transition-colors">
+            Contattami
           </Link>
+          <a href="/prenotazione#booking">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Prenota
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}

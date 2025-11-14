@@ -5,6 +5,7 @@ import StatsSection from "@/components/StatsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import SuccessCarousel from "@/components/SuccessCarousel";
 
 const ChiSono = () => {
   return (
@@ -12,8 +13,9 @@ const ChiSono = () => {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
         <StatsSection />
+        <AboutSection />
+        <SuccessCarousel />
         <HowItWorksSection />
       </main>
       <Footer />

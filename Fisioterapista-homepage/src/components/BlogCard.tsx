@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { User, Tag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface BlogCardProps {
+  id?: number;
   image: string;
   date: string;
   title: string;
@@ -11,6 +13,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ 
+  id,
   image, 
   date, 
   title, 
@@ -19,7 +22,8 @@ const BlogCard = ({
   category = "Healthcare"
 }: BlogCardProps) => {
   return (
-    <article className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+    <Link to={id ? `/blog/${id}` : "#"}>
+      <article className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
       <div className="relative overflow-hidden">
         <img 
           src={image} 
@@ -56,6 +60,7 @@ const BlogCard = ({
         </Button>
       </div>
     </article>
+    </Link>
   );
 };
 
