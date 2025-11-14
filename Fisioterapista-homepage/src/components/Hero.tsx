@@ -1,10 +1,21 @@
 import heroImage from "@/assets/hero_image.png";
 import { Instagram, Phone } from "lucide-react";
 
+// Modificato per includere link cliccabili
 const MarqueeBar = () => {
   const content = [
-    { icon: Instagram, text: "Instagram: dottoressa.armellini" },
-    { icon: Phone, text: "Contattami: +39 392 1780744" },
+    { 
+      icon: Instagram, 
+      text: "Instagram: dottoressa.armellini",
+      href: "https://www.instagram.com/dottoressa.armellini",
+      target: "_blank"
+    },
+    { 
+      icon: Phone, 
+      text: "Contattami: +39 392 1780744",
+      href: "tel:+393921780744",
+      target: "_self"
+    },
   ];
 
   return (
@@ -13,10 +24,17 @@ const MarqueeBar = () => {
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex gap-20 items-center">
             {content.map((item, index) => (
-              <div key={index} className="flex items-center gap-2 text-sm font-medium">
+              // Sostituito div con 'a' (link)
+              <a
+                key={index}
+                href={item.href}
+                target={item.target}
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
+              >
                 <item.icon className="w-6 h-6" />
                 <span>{item.text}</span>
-              </div>
+              </a>
             ))}
           </div>
         ))}

@@ -1,40 +1,53 @@
-import { Star } from "lucide-react";
-import doctorHero from "@/assets/doctor-portrait.jpg";
-import testimonialPatient from "@/assets/profile-simone.jpg";
+import { Star, Quote, Sparkle, Smile, Activity } from "lucide-react";
+import doctorHero from "@/assets/dottoressa.avif";
+import testimonialPatient from "@/assets/testimonial-patient.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="bg-secondary py-20 pt-32 relative overflow-hidden">
+    // Sezione "corta" (ripristinata a pt-24 pb-16)
+    <section className="bg-secondary pt-1 pb-1 relative">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full">
-              <span className="w-2 h-2 bg-success-green rounded-full"></span>
-              <span className="text-sm font-medium text-foreground">MI PRESENTO</span>
+          
+          {/* Colonna Sinistra (Testo) */}
+          <div className="space-y-4 relative z-10">
+            {/* Tag "MI PRESENTO" aggiornato */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-full">
+              <span className="text-sm font-medium text-primary">• MI PRESENTO</span>
             </div>
 
             <h1 className="text-6xl md:text-7xl font-heading font-bold text-foreground leading-tight">
               Dott.ssa Armellini
             </h1>
 
+            {/* Paragrafo aggiornato (più corto) */}
             <p className="text-lg text-foreground/80 max-w-lg">
-              Un approccio fisioterapico moderno e personalizzato per il tuo benessere. 
-              Professionista certificata con oltre 9 anni di esperienza nel trattamento 
-              di patologie muscolo-scheletriche.
+              Un approccio fisioterapico mirato, umano e scientifico.
             </p>
+            
+            {/* Icona decorativa (Scintilla) */}
+            <Sparkle className="w-10 h-10 text-primary absolute -bottom-16 -left-8 opacity-50" />
           </div>
 
+          {/* Colonna Destra (Immagine e Card) */}
           <div className="relative">
+            
             <div className="relative z-10">
+              {/* Immagine rimpicciolita come da tua modifica (w-3/4) */}
               <img
                 src={doctorHero}
                 alt="Dott.ssa Armellini"
-                className="w-full h-auto rounded-3xl shadow-2xl"
+                className="w-10/12 mx-auto h-10/12 rounded-3xl"
               />
             </div>
 
-            {/* Floating testimonial card */}
-            <div className="absolute -bottom-8 -left-8 bg-card rounded-2xl shadow-xl p-6 max-w-xs z-20 hidden md:block">
+            {/* Floating testimonial card (SPOSTATA PIU' IN ALTO) */}
+            {/* Modificato da -bottom-12 a bottom-8 */}
+            <div className="absolute bottom-8 right-0 bg-background rounded-2xl shadow-xl p-6 max-w-xs z-20 hidden md:block">
+              {/* Icona virgolette verde */}
+              <div className="absolute -top-4 -right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
+                <Quote className="w-5 h-5" />
+              </div>
               <div className="flex items-start gap-4">
                 <img
                   src={testimonialPatient}
@@ -42,36 +55,27 @@ const HeroSection = () => {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div className="flex-1">
+                  {/* Testo recensione aggiornato */}
                   <p className="text-sm text-foreground/80 mb-2">
-                    "Professionalità e competenza eccezionali. Risultati visibili già dalle prime sedute."
+                    "Dopo essermi operato ad entrambe le spalle, mi ha rimesso in piedi in tempi record per tornare a gareggiare e a stare bene"
                   </p>
-                  <p className="text-sm font-semibold text-foreground">Andrea Spagnolli</p>
+                  <p className="text-sm font-semibold text-foreground uppercase">ANDREA SPAGNOLLI</p>
+                  {/* Quadratini verdi (al posto delle stelle) */}
                   <div className="flex gap-1 mt-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-success-green text-success-green" />
+                      <div key={i} className="w-4 h-4 bg-primary rounded-sm" />
                     ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating update card */}
-            <div className="absolute -top-8 -right-8 bg-card rounded-2xl shadow-xl p-6 max-w-xs z-20 hidden lg:block">
+            {/* Floating update card (Spostata e Aggiornata) */}
+            <div className="absolute bottom-8 -left-8 bg-background rounded-2xl shadow-xl p-6 max-w-xs z-20 hidden lg:block">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-success-green/10 rounded-full flex items-center justify-center">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                      fill="currentColor"
-                      className="text-success-green"
-                    />
-                  </svg>
+                {/* Icona medicale (Activity) */}
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Activity className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-foreground">In Continuo</p>
