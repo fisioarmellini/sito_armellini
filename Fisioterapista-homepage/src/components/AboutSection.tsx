@@ -1,6 +1,7 @@
 import doctorPortrait from "@/assets/doctor_image.jpeg";
 import { Button } from "@/components/ui/button";
 import { Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -45,9 +46,11 @@ const AboutSection = () => {
               Credo fermamente in un approccio olistico che considera non solo il sintomo, ma la
               persona nella sua interezza, accompagnandola verso il recupero completo e duraturo.
             </p>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
-              Scopri di più
-            </Button>
+            <Link to="/chi-sono">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
+                Scopri di più
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

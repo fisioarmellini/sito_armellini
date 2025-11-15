@@ -16,67 +16,268 @@ import kneeAnatomy from "@/assets/knee-anatomy.jpg";
 const conditions = [
   {
     id: 1,
-    image: physioImage,
-    title: "Mobilizzazione articolare precoce",
-    description: "La mobilizzazione articolare precoce è una tecnica di terapia manuale che prevede movimenti articolari delicati e graduali, mirati a recuperare rapidamente la funzionalità articolare persa o compromessa dopo interventi, traumi o infiammazioni acute.",
-    imagePosition: "top"
+    image: shoulderAnatomy,
+    title: "Artrosi",
+    benefits: [
+      "Sintomi comuni: dolore e rigidità articolare",
+      "Cause frequenti: usura cartilagine o sovraccarico",
+      "Approccio terapeutico: terapia manuale ed esercizi mirati"
+    ]
   },
   {
     id: 2,
-    image: physioImage2,
-    title: "Ginnastica posturale personalizzata",
-    description: "La ginnastica posturale personalizzata è una metodica terapeutica che prevede esercizi specifici mirati alla correzione delle posture scorrette, migliorando l'equilibrio muscolare e articolare. Ogni programma è personalizzato secondo le esigenze individuali del paziente.",
-    imagePosition: "bottom"
+    image: physioImage,
+    title: "Borsite",
+    benefits: [
+      "Sintomi comuni: gonfiore e dolore localizzato",
+      "Cause frequenti: infiammazione da trauma o attrito",
+      "Approccio terapeutico: riduzione infiammazione e mobilità"
+    ]
   },
   {
     id: 3,
-    image: shoulderAnatomy,
-    title: "Riabilitazione funzionale mirata",
-    description: "La riabilitazione funzionale mirato è un percorso terapeutico basato su esercizi specifici, personalizzati e progressivi. Combina tecniche manuali ed esercizio terapeutico per ripristinare il movimento naturale, la forza e la coordinazione del corpo.",
-    imagePosition: "top"
+    image: spineAnatomy,
+    title: "Cefalea (mal di testa)",
+    benefits: [
+      "Sintomi comuni: dolore pulsante o tensivo",
+      "Cause frequenti: tensioni cervicali, stress, postura",
+      "Approccio terapeutico: rilascio tensioni e riequilibrio"
+    ]
   },
   {
     id: 4,
-    image: spineAnatomy,
-    title: "Terapia manuale osteopatica",
-    description: "Tecniche manuali avanzate per il trattamento di disfunzioni muscolo-scheletriche, migliorando la mobilità articolare e riducendo il dolore attraverso manipolazioni precise e sicure.",
-    imagePosition: "bottom"
+    image: physioImage2,
+    title: "Cervicalgia",
+    benefits: [
+      "Sintomi comuni: dolore al tratto cervicale",
+      "Cause frequenti: postura, stress, rigidità muscolare",
+      "Approccio terapeutico: mobilizzazione e decontrattura"
+    ]
   },
   {
     id: 5,
     image: kneeAnatomy,
-    title: "Recupero post-operatorio",
-    description: "Programmi specifici di riabilitazione post-chirurgica per accelerare il recupero, ridurre il dolore e ripristinare la piena funzionalità dopo interventi ortopedici.",
-    imagePosition: "top"
+    title: "Colpo di frusta",
+    benefits: [
+      "Sintomi comuni: dolore acuto e rigidità cervicale",
+      "Cause frequenti: trauma improvviso del rachide",
+      "Approccio terapeutico: recupero mobilità e stabilità"
+    ]
   },
-   {
+  {
     id: 6,
-    image: spineAnatomy,
-    title: "Terapia clavicola rotta",
-    description: "Tecniche manuali avanzate per il trattamento di disfunzioni muscolo-scheletriche, migliorando la mobilità articolare e riducendo il dolore attraverso manipolazioni precise e sicure.",
-    imagePosition: "bottom"
+    image: shoulderAnatomy,
+    title: "Contrattura muscolare",
+    benefits: [
+      "Sintomi comuni: tensione e dolore al muscolo",
+      "Cause frequenti: sforzo, postura o sovraccarico",
+      "Approccio terapeutico: decontrattura e recupero funzione"
+    ]
   },
+  {
+    id: 7,
+    image: physioImage,
+    title: "Coxartrosi (anca)",
+    benefits: [
+      "Sintomi comuni: dolore all'anca e rigidità",
+      "Cause frequenti: degenerazione articolare",
+      "Approccio terapeutico: terapia manuale e rinforzo"
+    ]
+  },
+  {
+    id: 8,
+    image: spineAnatomy,
+    title: "Dolore alla schiena",
+    benefits: [
+      "Sintomi comuni: tensione o dolore lombare/dorsale",
+      "Cause frequenti: postura, stress, sforzi ripetuti",
+      "Approccio terapeutico: riequilibrio muscolare e mobilità"
+    ]
+  },
+  {
+    id: 9,
+    image: physioImage2,
+    title: "Dolore alla spalla",
+    benefits: [
+      "Sintomi comuni: dolore nei movimenti del braccio",
+      "Cause frequenti: infiammazione, sovraccarico, instabilità",
+      "Approccio terapeutico: recupero mobilità e stabilità"
+    ]
+  },
+  {
+    id: 10,
+    image: kneeAnatomy,
+    title: "Dolore articolare",
+    benefits: [
+      "Sintomi comuni: dolore in movimento o a riposo",
+      "Cause frequenti: infiammazione o sovraccarico",
+      "Approccio terapeutico: terapia manuale ed esercizi"
+    ]
+  },
+  {
+    id: 11,
+    image: shoulderAnatomy,
+    title: "Dolori muscolari",
+    benefits: [
+      "Sintomi comuni: indolenzimento e tensione",
+      "Cause frequenti: sforzo, infiammazione o postura",
+      "Approccio terapeutico: decontrattura e riequilibrio"
+    ]
+  },
+  {
+    id: 12,
+    image: physioImage,
+    title: "Dorsalgia / Dorsopatia",
+    benefits: [
+      "Sintomi comuni: dolore nella zona dorsale",
+      "Cause frequenti: rigidità, postura, sovraccarico",
+      "Approccio terapeutico: mobilizzazione e rinforzo"
+    ]
+  },
+  {
+    id: 13,
+    image: spineAnatomy,
+    title: "Epicondilite / Epitrocleite",
+    benefits: [
+      "Sintomi comuni: dolore al gomito e presa debole",
+      "Cause frequenti: sovraccarico tendineo",
+      "Approccio terapeutico: terapia manuale ed esercizi specifici"
+    ]
+  },
+  {
+    id: 14,
+    image: physioImage2,
+    title: "Fascite plantare",
+    benefits: [
+      "Sintomi comuni: dolore al tallone o alla pianta",
+      "Cause frequenti: infiammazione della fascia plantare",
+      "Approccio terapeutico: stretching e riequilibrio del carico"
+    ]
+  },
+  {
+    id: 15,
+    image: kneeAnatomy,
+    title: "Gonartrosi (ginocchio)",
+    benefits: [
+      "Sintomi comuni: dolore e rigidità al ginocchio",
+      "Cause frequenti: degenerazione articolare",
+      "Approccio terapeutico: mobilità, forza e controllo"
+    ]
+  },
+  {
+    id: 16,
+    image: shoulderAnatomy,
+    title: "Instabilità di spalla",
+    benefits: [
+      "Sintomi comuni: cedimento e dolore nei movimenti",
+      "Cause frequenti: lassità legamentosa o traumi",
+      "Approccio terapeutico: rinforzo e stabilizzazione articolare"
+    ]
+  },
+  {
+    id: 17,
+    image: physioImage,
+    title: "Lombalgia",
+    benefits: [
+      "Sintomi comuni: dolore e rigidità lombare",
+      "Cause frequenti: postura, sforzi o tensioni muscolari",
+      "Approccio terapeutico: mobilità e riequilibrio muscolare"
+    ]
+  },
+  {
+    id: 18,
+    image: spineAnatomy,
+    title: "Malattia di Dupuytren",
+    benefits: [
+      "Sintomi comuni: retrazione palmare e rigidità dita",
+      "Cause frequenti: ispessimento progressivo della fascia palmare",
+      "Approccio terapeutico: mobilizzazione e miglioramento funzionale"
+    ]
+  },
+  {
+    id: 19,
+    image: physioImage2,
+    title: "Paresi facciale",
+    benefits: [
+      "Sintomi comuni: difficoltà nei movimenti del volto",
+      "Cause frequenti: infiammazione o compressione del nervo facciale",
+      "Approccio terapeutico: stimolazione neuromuscolare mirata"
+    ]
+  },
+  {
+    id: 20,
+    image: kneeAnatomy,
+    title: "Sciatica",
+    benefits: [
+      "Sintomi comuni: dolore lombare irradiato alla gamba",
+      "Cause frequenti: compressione del nervo sciatico",
+      "Approccio terapeutico: decompressione e riequilibrio posturale"
+    ]
+  },
+  {
+    id: 21,
+    image: shoulderAnatomy,
+    title: "Scoliosi",
+    benefits: [
+      "Sintomi comuni: asimmetrie posturali e dolore",
+      "Cause frequenti: alterazioni strutturali o funzionali della colonna",
+      "Approccio terapeutico: esercizi correttivi e controllo posturale"
+    ]
+  },
+  {
+    id: 22,
+    image: physioImage,
+    title: "Slogatura",
+    benefits: [
+      "Sintomi comuni: dolore, gonfiore e instabilità articolare",
+      "Cause frequenti: trauma con distorsione del legamento",
+      "Approccio terapeutico: recupero mobilità e rinforzo"
+    ]
+  },
+  {
+    id: 23,
+    image: spineAnatomy,
+    title: "Tendinite",
+    benefits: [
+      "Sintomi comuni: dolore durante movimento e carico",
+      "Cause frequenti: sovraccarico o microtraumi ripetuti",
+      "Approccio terapeutico: terapia manuale ed esercizi specifici"
+    ]
+  },
+  {
+    id: 24,
+    image: physioImage2,
+    title: "Torcicollo",
+    benefits: [
+      "Sintomi comuni: dolore e blocco cervicale",
+      "Cause frequenti: movimenti bruschi, postura o tensioni",
+      "Approccio terapeutico: decontrattura e mobilizzazione"
+    ]
+  }
 ];
 
 const ConditionsSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const ConditionCard = ({ condition }: { condition: typeof conditions[0] }) => (
-    <div className={`space-y-8 flex flex-col border border-border rounded-2xl p-6 h-full ${
-      condition.imagePosition === "bottom" ? "flex-col-reverse" : ""
-    }`}>
+    <div className="space-y-6 flex flex-col border border-border rounded-2xl p-6 h-full bg-card">
       <img 
         src={condition.image}
         alt={condition.title}
         className="rounded-2xl w-full h-48 object-cover" 
       />
-      <div className="space-y-4">
+      <div className="space-y-4 flex-1">
         <h3 className="text-2xl font-bold text-foreground">
           {condition.title}
         </h3>
-        <p className="text-muted-foreground leading-relaxed">
-          {condition.description}
-        </p>
+        <ul className="space-y-3">
+          {condition.benefits.map((benefit, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <span className="text-primary mt-1">•</span>
+              <span className="text-muted-foreground text-sm leading-relaxed">{benefit}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

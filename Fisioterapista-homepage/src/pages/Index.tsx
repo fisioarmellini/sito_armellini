@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import TreatmentsSection from "@/components/TreatmentsSection";
-import ConditionsSection from "@/components/ConditionsSection";
+import ConditionsSectionHome from "@/components/ConditionsSectionHome";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import LatestNewsFeed from "@/components/LatestNewsFeed";
@@ -22,7 +22,7 @@ const Index = () => {
       <AboutSection />
       <SuccessCarousel />
       <TreatmentsSection />
-      <ConditionsSection />
+      <ConditionsSectionHome />
       <TestimonialsSection />
       <HowItWorksSection />
       <LatestNewsFeed />

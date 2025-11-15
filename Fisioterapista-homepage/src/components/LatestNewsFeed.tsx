@@ -22,29 +22,29 @@ const blogPosts: BlogPost[] = [
     date: "01/01/25",
     author: "Admin",
     category: "Healthcare",
-    title: "Innovazioni nella Telemedicina",
+    title: "Empower Yourself and Your Health",
     excerpt:
-      "Scopri come la tecnologia digitale sta trasformando l'accesso alle cure mediche e migliorando la qualità dell'assistenza sanitaria.",
+      "Discover professional physiotherapy techniques that can transform your daily wellness routine and improve mobility.",
   },
   {
     id: 2,
     image: blog2,
-    date: "28/12/24",
+    date: "05/01/25",
     author: "Admin",
     category: "Healthcare",
-    title: "Collaborazione Medica Moderna",
+    title: "Essential Stretching for Daily Wellness",
     excerpt:
-      "L'importanza del lavoro di squadra multidisciplinare per garantire cure ottimali e risultati migliori per i pazienti.",
+      "Learn simple yet effective stretching exercises you can incorporate into your morning routine for better flexibility.",
   },
   {
     id: 3,
     image: blog3,
-    date: "25/12/24",
+    date: "10/01/25",
     author: "Admin",
     category: "Healthcare",
-    title: "Tecnologie Sanitarie Avanzate",
+    title: "Understanding Your Treatment Plan",
     excerpt:
-      "Una panoramica sulle ultime innovazioni tecnologiche che stanno rivoluzionando la diagnostica e il trattamento medico.",
+      "A comprehensive guide to making the most of your healthcare consultations and physiotherapy sessions.",
   },
 ];
 
@@ -109,7 +109,7 @@ const LatestNewsFeed = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Link to="/blog">
+                <Link to={`/blog/${post.id}`}>
                   <Button variant="outline" className="w-full">
                     Read More
                   </Button>

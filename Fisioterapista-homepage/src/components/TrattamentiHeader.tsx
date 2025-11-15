@@ -6,7 +6,7 @@ const TrattamentiHeader = () => {
           Trattamenti
         </h2>
         <p className="text-lg text-foreground/80 leading-relaxed">
-          Tecniche avanzate e personalizzate per il tuo recupero e benessere.
+          Un approccio integrato e personalizzato per ogni esigenza riabilitativa. Di seguito tutti i trattamenti disponibili.
         </p>
       </div>
     </div>

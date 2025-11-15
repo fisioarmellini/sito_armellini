@@ -1,5 +1,6 @@
 import { Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import anatomySpine from "@/assets/anatomy-spine.jpg";
 import anatomyKnee from "@/assets/anatomy-knee.jpg";
 import anatomyShoulder from "@/assets/anatomy-shoulder.jpg";
@@ -54,12 +55,14 @@ const TreatmentsSection = () => {
           </div>
           
           {/* Pulsante "Vedi tutti" */}
-          <Button 
-            variant="outline" 
-            className="border-primary text-primary hover:bg-card hover:text-primary flex-shrink-0"
-          >
-            Vedi tutti i trattamenti
-          </Button>
+          <Link to="/trattamenti#treatments">
+            <Button 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-card hover:text-primary flex-shrink-0"
+            >
+              Vedi tutti i trattamenti
+            </Button>
+          </Link>
         </div>
 
         {/* Griglia Card Trattamenti */}

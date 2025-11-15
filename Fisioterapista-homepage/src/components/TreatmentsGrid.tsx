@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import TreatmentCard from "./TreatmentCard";
+import { Check } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import shoulderAnatomy from "@/assets/shoulder-anatomy.jpg";
 import spineAnatomy from "@/assets/spine-anatomy.jpg";
 import kneeAnatomy from "@/assets/knee-anatomy.jpg";
@@ -10,93 +11,210 @@ import sportsTherapy from "@/assets/sports-therapy.jpg";
 
 const treatments = [
   {
-    image: shoulderAnatomy,
-    title: "Riabilitazione Spalla",
+    image: manualTherapy,
+    title: "Terapia manuale ortopedica (OMT / COMT)",
     benefits: [
-      "Riduzione del dolore articolare",
-      "Miglioramento della mobilità",
-      "Recupero post-operatorio",
-      "Prevenzione delle recidive"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: shoulderAnatomy,
+    title: "Mobilizzazione articolare e vertebrale",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: spineAnatomy,
-    title: "Terapia della Schiena",
+    title: "Tecniche HVLA (High Velocity Low Amplitude)",
     benefits: [
-      "Alleviamento del mal di schiena",
-      "Correzione della postura",
-      "Rafforzamento muscolare",
-      "Tecniche manuali avanzate"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: kneeAnatomy,
-    title: "Riabilitazione Ginocchio",
+    title: "Manipolazione fasciale (metodo Stecco)",
     benefits: [
-      "Recupero da lesioni legamentose",
-      "Trattamento dell'artrosi",
-      "Miglioramento della stabilità",
-      "Programmi personalizzati"
-    ]
-  },
-  {
-    image: manualTherapy,
-    title: "Terapia Manuale",
-    benefits: [
-      "Tecniche osteopatiche",
-      "Mobilizzazione articolare",
-      "Trattamento dei tessuti molli",
-      "Approccio olistico"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: rehabilitation,
-    title: "Riabilitazione Funzionale",
+    title: "Massoterapia decontratturante e distensiva",
     benefits: [
-      "Esercizi terapeutici mirati",
-      "Recupero della forza",
-      "Programmi progressivi",
-      "Monitoraggio continuo"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: sportsTherapy,
-    title: "Fisioterapia Sportiva",
+    title: "Massaggio sportivo",
     benefits: [
-      "Prevenzione infortuni",
-      "Recupero atletico rapido",
-      "Ottimizzazione performance",
-      "Supporto per atleti professionisti"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: manualTherapy,
+    title: "Esercizio terapeutico personalizzato",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: shoulderAnatomy,
-    title: "Terapia del Dolore Cronico",
+    title: "Rieducazione posturale",
     benefits: [
-      "Gestione del dolore persistente",
-      "Tecniche di rilassamento",
-      "Miglioramento qualità della vita",
-      "Approccio multidisciplinare"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: spineAnatomy,
-    title: "Riabilitazione Neurologica",
+    title: "Rieducazione motoria e propriocettiva",
     benefits: [
-      "Recupero funzioni motorie",
-      "Stimolazione neuromuscolare",
-      "Esercizi di coordinazione",
-      "Supporto continuo"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   },
   {
     image: kneeAnatomy,
-    title: "Fisioterapia Pediatrica",
+    title: "Neurac Redcord",
     benefits: [
-      "Sviluppo motorio",
-      "Correzione posturale precoce",
-      "Approccio ludico",
-      "Supporto alla crescita"
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: rehabilitation,
+    title: "Rinforzo muscolare e stabilizzazione articolare",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: sportsTherapy,
+    title: "Trattamenti dermatofunzionali pre e post operatori",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: manualTherapy,
+    title: "Drenaggio linfatico e modellante (Metodo Renata França)",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: shoulderAnatomy,
+    title: "Riduzione edemi e fibrosi post-chirurgica",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: spineAnatomy,
+    title: "Trattamento cicatrici e aderenze",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: kneeAnatomy,
+    title: "Tecarterapia",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: rehabilitation,
+    title: "Ultrasuoni",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: sportsTherapy,
+    title: "Elettroterapia antalgica",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: manualTherapy,
+    title: "Laserterapia",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: shoulderAnatomy,
+    title: "Kinesio taping / Taping elastico",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: spineAnatomy,
+    title: "Neuromuscular reeducation",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: kneeAnatomy,
+    title: "Riabilitazione post chirurgia ortopedica",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
+    ]
+  },
+  {
+    image: rehabilitation,
+    title: "Recupero funzionale dopo protesi, artroscopie e fratture",
+    benefits: [
+      "Beneficio: riduzione del dolore e rilascio dei tessuti",
+      "Approccio: tecnica dedicata e personalizzata",
+      "Esito: ripristino armonia e movimento"
     ]
   }
 ];
@@ -106,11 +224,34 @@ const TreatmentsGrid = () => {
   const displayedTreatments = isExpanded ? treatments : treatments.slice(0, 6);
 
   return (
-    <section className="py-8 px-6 bg-background">
+    <section id="treatments" className="py-8 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedTreatments.map((treatment, index) => (
-            <TreatmentCard key={index} {...treatment} />
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden rounded-2xl border-border">
+              <CardHeader className="p-0">
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={treatment.image}
+                    alt={treatment.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
+                  {treatment.title}
+                </h3>
+                <ul className="space-y-3 mb-6">
+                  {treatment.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
