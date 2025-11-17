@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://andrei-piticas.github.io/Fisioterapista",
+  "homepage": "https://fisioarmellini.github.io/sito_armellini",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

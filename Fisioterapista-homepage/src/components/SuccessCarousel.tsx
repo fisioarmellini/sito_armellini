@@ -52,9 +52,9 @@ const successCases = [
 
 const SuccessCarousel = () => {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-12 md:py-20 px-4 sm:px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground text-center mb-8 md:mb-12 px-2">
           I miei casi di successo più recenti
         </h2>
         

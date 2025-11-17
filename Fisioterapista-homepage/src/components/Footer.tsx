@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-6">
               {/* 2. Logo (come da tua istruzione: src/public/logo_removed.png) */}
               <img 
-                src="/logo_removed.png" 
+                src="/sito_armellini/logo_removed.png" 
                 alt="Logo" 
                 className="h-8 w-auto" 
               />

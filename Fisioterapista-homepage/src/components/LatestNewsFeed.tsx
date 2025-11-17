@@ -50,15 +50,15 @@ const blogPosts: BlogPost[] = [
 
 const LatestNewsFeed = () => {
   return (
-    <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-background py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-muted-foreground text-sm mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-secondary text-muted-foreground text-xs sm:text-sm mb-3 md:mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
             RIMANI AGGIORNATO
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground px-2">
             Novità e blog
           </h2>
         </div>

@@ -19,21 +19,21 @@ const MarqueeBar = () => {
   ];
 
   return (
-    <div className="bg-primary text-primary-foreground overflow-hidden py-6">
-      <div className="animate-marquee whitespace-nowrap flex gap-12">
+    <div className="bg-primary text-primary-foreground overflow-hidden py-4 md:py-6">
+      <div className="animate-marquee whitespace-nowrap flex gap-8 md:gap-12">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="flex gap-20 items-center">
+          <div key={i} className="flex gap-12 md:gap-20 items-center">
             {content.map((item, index) => (
-              // Sostituito div con 'a' (link)
               <a
                 key={index}
                 href={item.href}
                 target={item.target}
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
+                className="flex items-center gap-2 text-xs sm:text-sm font-medium transition-opacity hover:opacity-80"
               >
-                <item.icon className="w-6 h-6" />
-                <span>{item.text}</span>
+                <item.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                <span className="hidden sm:inline">{item.text}</span>
+                <span className="sm:hidden">{item.text.split(':')[0]}</span>
               </a>
             ))}
           </div>
@@ -45,43 +45,39 @@ const MarqueeBar = () => {
 
 const Hero = () => {
   return (
-    <section id = "home" className="relative overflow-hidden">
-      <div className="container mx-auto px-6 text-center">
-        <div className="mb-12 pt-10">
-          <div className="inline-block bg-mint-light text-foreground px-6 py-2 rounded-full text-sm font-medium mb-6">
+    <section id="home" className="relative overflow-hidden min-h-screen md:min-h-0 flex flex-col md:block pb-16 md:pb-0">
+      <div className="container mx-auto px-4 sm:px-6 text-center flex-1 flex flex-col justify-center md:block">
+        <div className="mb-6 md:mb-12 pt-6 md:pt-10">
+          <div className="inline-block bg-mint-light text-foreground px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 md:mb-6">
             Un approccio fisioterapico mirato, umano e scientifico.
           </div>
-          <h1 className="text-4xl md:text-7xl font-bold mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 px-2">
             Dott.ssa Francesca Armellini
           </h1>
         </div>
 
-        {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 border-4 border-mint-accent rounded-full opacity-50" />
-      <div className="absolute bottom-20 right-10 w-16 h-16">
-        <svg viewBox="0 0 100 100" className="text-mint-accent opacity-50">
-          <path
-            d="M 10 50 Q 30 30 50 50 T 90 50"
-            stroke="currentColor"
-            strokeWidth="4"
-            fill="none"
-          />
-        </svg>
-      </div>
-
-      
+        {/* Decorative elements - hidden on mobile */}
+        <div className="hidden md:block absolute top-20 left-10 w-20 h-20 border-4 border-mint-accent rounded-full opacity-50" />
+        <div className="hidden md:block absolute bottom-20 right-10 w-16 h-16">
+          <svg viewBox="0 0 100 100" className="text-mint-accent opacity-50">
+            <path
+              d="M 10 50 Q 30 30 50 50 T 90 50"
+              stroke="currentColor"
+              strokeWidth="4"
+              fill="none"
+            />
+          </svg>
+        </div>
 
         {/* Hero Image */}
-      <div className="flex justify-center">
+        <div className="flex justify-center px-2 flex-1 md:flex-initial">
           <img
             src={heroImage}
             alt="Studio fisioterapico - Dott.ssa Francesca Armellini"
-            className="w-full max-w-6xl rounded-3xl object-cover"
+            className="w-full max-w-6xl rounded-2xl md:rounded-3xl object-cover h-[50vh] md:h-auto"
           />
         </div>
       </div>
-
-      
 
       {/* MarqueeBar attached to bottom */}
       <div className="absolute bottom-0 left-0 w-full">
