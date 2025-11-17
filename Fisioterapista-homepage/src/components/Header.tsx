@@ -14,7 +14,7 @@ const Header = () => {
     <header className="bg-background border-b sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-         <img src="/sito_armellini/logo_removed.png" alt="Logo" className="w-14 h-8 cursor-pointer" />
+         <img src="/Fisioterapista/logo_removed.png" alt="Logo" className="w-14 h-8 cursor-pointer" />
         </Link>
 
         {/* Desktop Navigation */}
