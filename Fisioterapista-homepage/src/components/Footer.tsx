@@ -19,8 +19,7 @@ const Footer = () => {
             </div>
             {/* 3. Testo aggiornato (preso dallo screenshot) */}
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Dal dolore alla ripresa, ogni giorno aiuto le persone a ritrovare libertà di movimento, 
-              benessere e fili proprio corpo.
+              L'energia e la perseveranza conquistano tutte le cose.
             </p>
             {/* 4. Copyright RIMOSSO da qui */}
           </div>
@@ -32,17 +31,17 @@ const Footer = () => {
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5" />
                 {/* 5. Email aggiornata */}
-                <span>info@medipro.com</span>
+                <span>dottoressa.armellini@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5" />
                 {/* 6. Telefono aggiornato */}
-                <span>+39 392 178 0744</span>
+                <span>+39 379 100 9600</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5" />
                 {/* 7. Indirizzo aggiornato */}
-                <span>Via Giuseppe Mercalli 11, Roma</span>
+                <span>Via Giuseppe Mercalli 11, Roma Parioli</span>
               </li>
             </ul>
           </div>

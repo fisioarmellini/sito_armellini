@@ -66,16 +66,6 @@ const conditions = [
   },
   {
     id: 6,
-    image: shoulderAnatomy,
-    title: "Contrattura muscolare",
-    benefits: [
-      "Sintomi comuni: tensione e dolore al muscolo",
-      "Cause frequenti: sforzo, postura o sovraccarico",
-      "Approccio terapeutico: decontrattura e recupero funzione"
-    ]
-  },
-  {
-    id: 7,
     image: physioImage,
     title: "Coxartrosi (anca)",
     benefits: [
@@ -85,49 +75,19 @@ const conditions = [
     ]
   },
   {
-    id: 8,
+    id: 7,
     image: spineAnatomy,
-    title: "Dolore alla schiena",
+    title: "Lombalgia",
     benefits: [
-      "Sintomi comuni: tensione o dolore lombare/dorsale",
-      "Cause frequenti: postura, stress, sforzi ripetuti",
-      "Approccio terapeutico: riequilibrio muscolare e mobilità"
+      "Sintomi comuni: dolore e rigidità lombare",
+      "Cause frequenti: postura, sforzi o tensioni muscolari",
+      "Approccio terapeutico: mobilità e riequilibrio muscolare"
     ]
   },
   {
-    id: 9,
-    image: physioImage2,
-    title: "Dolore alla spalla",
-    benefits: [
-      "Sintomi comuni: dolore nei movimenti del braccio",
-      "Cause frequenti: infiammazione, sovraccarico, instabilità",
-      "Approccio terapeutico: recupero mobilità e stabilità"
-    ]
-  },
-  {
-    id: 10,
-    image: kneeAnatomy,
-    title: "Dolore articolare",
-    benefits: [
-      "Sintomi comuni: dolore in movimento o a riposo",
-      "Cause frequenti: infiammazione o sovraccarico",
-      "Approccio terapeutico: terapia manuale ed esercizi"
-    ]
-  },
-  {
-    id: 11,
-    image: shoulderAnatomy,
-    title: "Dolori muscolari",
-    benefits: [
-      "Sintomi comuni: indolenzimento e tensione",
-      "Cause frequenti: sforzo, infiammazione o postura",
-      "Approccio terapeutico: decontrattura e riequilibrio"
-    ]
-  },
-  {
-    id: 12,
+    id: 8,
     image: physioImage,
-    title: "Dorsalgia / Dorsopatia",
+    title: "Dorsalgia",
     benefits: [
       "Sintomi comuni: dolore nella zona dorsale",
       "Cause frequenti: rigidità, postura, sovraccarico",
@@ -135,7 +95,7 @@ const conditions = [
     ]
   },
   {
-    id: 13,
+    id: 9,
     image: spineAnatomy,
     title: "Epicondilite / Epitrocleite",
     benefits: [
@@ -145,7 +105,7 @@ const conditions = [
     ]
   },
   {
-    id: 14,
+    id: 10,
     image: physioImage2,
     title: "Fascite plantare",
     benefits: [
@@ -155,7 +115,7 @@ const conditions = [
     ]
   },
   {
-    id: 15,
+    id: 11,
     image: kneeAnatomy,
     title: "Gonartrosi (ginocchio)",
     benefits: [
@@ -165,7 +125,7 @@ const conditions = [
     ]
   },
   {
-    id: 16,
+    id: 12,
     image: shoulderAnatomy,
     title: "Instabilità di spalla",
     benefits: [
@@ -175,39 +135,9 @@ const conditions = [
     ]
   },
   {
-    id: 17,
-    image: physioImage,
-    title: "Lombalgia",
-    benefits: [
-      "Sintomi comuni: dolore e rigidità lombare",
-      "Cause frequenti: postura, sforzi o tensioni muscolari",
-      "Approccio terapeutico: mobilità e riequilibrio muscolare"
-    ]
-  },
-  {
-    id: 18,
-    image: spineAnatomy,
-    title: "Malattia di Dupuytren",
-    benefits: [
-      "Sintomi comuni: retrazione palmare e rigidità dita",
-      "Cause frequenti: ispessimento progressivo della fascia palmare",
-      "Approccio terapeutico: mobilizzazione e miglioramento funzionale"
-    ]
-  },
-  {
-    id: 19,
-    image: physioImage2,
-    title: "Paresi facciale",
-    benefits: [
-      "Sintomi comuni: difficoltà nei movimenti del volto",
-      "Cause frequenti: infiammazione o compressione del nervo facciale",
-      "Approccio terapeutico: stimolazione neuromuscolare mirata"
-    ]
-  },
-  {
-    id: 20,
+    id: 13,
     image: kneeAnatomy,
-    title: "Sciatica",
+    title: "Sciatalgia",
     benefits: [
       "Sintomi comuni: dolore lombare irradiato alla gamba",
       "Cause frequenti: compressione del nervo sciatico",
@@ -215,43 +145,13 @@ const conditions = [
     ]
   },
   {
-    id: 21,
+    id: 14,
     image: shoulderAnatomy,
     title: "Scoliosi",
     benefits: [
       "Sintomi comuni: asimmetrie posturali e dolore",
       "Cause frequenti: alterazioni strutturali o funzionali della colonna",
       "Approccio terapeutico: esercizi correttivi e controllo posturale"
-    ]
-  },
-  {
-    id: 22,
-    image: physioImage,
-    title: "Slogatura",
-    benefits: [
-      "Sintomi comuni: dolore, gonfiore e instabilità articolare",
-      "Cause frequenti: trauma con distorsione del legamento",
-      "Approccio terapeutico: recupero mobilità e rinforzo"
-    ]
-  },
-  {
-    id: 23,
-    image: spineAnatomy,
-    title: "Tendinite",
-    benefits: [
-      "Sintomi comuni: dolore durante movimento e carico",
-      "Cause frequenti: sovraccarico o microtraumi ripetuti",
-      "Approccio terapeutico: terapia manuale ed esercizi specifici"
-    ]
-  },
-  {
-    id: 24,
-    image: physioImage2,
-    title: "Torcicollo",
-    benefits: [
-      "Sintomi comuni: dolore e blocco cervicale",
-      "Cause frequenti: movimenti bruschi, postura o tensioni",
-      "Approccio terapeutico: decontrattura e mobilizzazione"
     ]
   }
 ];

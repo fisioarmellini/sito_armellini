@@ -5,17 +5,17 @@ const ContactCards = () => {
     {
       icon: MapPin,
       title: "Dove sono",
-      content: "Via Roma 123, 00100 Roma, Italia",
+      content: "Via Giuseppe Mercalli 11, Roma Parioli",
     },
     {
       icon: Phone,
       title: "Telefono",
-      content: "+39 123 456 7890",
+      content: "+39 379 100 9600",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@fisioterapia.it",
+      content: "dottoressa.armellini@gmail.com",
     },
   ];
 

@@ -4,34 +4,23 @@ import { useState, useEffect } from "react"; // 1. Import useEffect
 
 const testimonials = [
   {
-    name: "Maria Rossi",
-    text: "La Dott.ssa Armellini è stata fondamentale per il mio recupero. Professionalità, competenza e un'attenzione umana che fa la differenza. Dopo mesi di dolore alla schiena, finalmente ho ritrovato il benessere.",
-    rating: 5,
-    //image: "//esempio.png", //se voglio l'immagine inserisco questo per ogni recensione 
-  },
-  {
-    name: "Giovanni Bianchi",
-    text: "Esperienza eccellente. Trattamenti mirati ed efficaci che mi hanno permesso di tornare a praticare sport. Consiglio vivamente la Dott.ssa Armellini a chiunque cerchi un professionista serio e preparato.",
+    name: "Isabella De Luca",
+    text: "Sono stata in cura dalla dott.ssa Armellini prima per un problema al sovraspinoso e, successivamente, per una fastidiosissima spondilouncoartrosi cervicale... Entrambe le patologie risolte egregiamente con pazienza e dedizione. Attenta e scrupolosa, Francesca mi ha sin da subito suggerito alcuni esercizi da fare a casa per rendere il percorso riabilitativo più veloce e questo la dice lunga sulla sua etica professionale!!! Prima di conoscerla ho girato numerosi 'centri di eccellenza' che, al contrario, facevano di tutto pur di prolungare le sedute presso i loro studi. Ultimo particolare, ma solo perchè altrimenti sarei prolissa, è l'aspetto empatico: Francesca ha una capacità di ascolto fuori dal comune per una ragazza della sua età: pur essendo molto più giovane di me (potrebbe essere mia figlia!!!) è riuscita a cogliere in me degli aspetti di somatizzazione importanti, riconoscendo i quali, sono migliorata ancora più velocemente. Trovare degli specialisti così preparati è davvero una fortuna... Provare per credere!!!!!",
     rating: 5,
   },
   {
-    name: "Laura Verdi",
-    text: "Un'approccio olistico che considera la persona nella sua interezza. La Dott.ssa Armellini non si limita a trattare il sintomo, ma cerca di comprendere le cause profonde del problema. Sono molto soddisfatta.",
+    name: "Bernardo Boria",
+    text: "Dopo anni di problemi alla spalla e al gomito e vari specialisti pagati a vuoto finalmente trovo una fisioterapista competente e soprattutto che sa ascoltare le esigenze del paziente (cosa non scontata nel settore fisioterapico). Già dopo poche sedute sto avendo ottimi risultati. Grazie mille",
     rating: 5,
   },
   {
-    name: "Maria Rossi", 
-    text: "La Dott.ssa Armellini è stata fondamentale per il mio recupero. Professionalità, competenza e un'attenzione umana che fa la differenza. Dopo mesi di dolore alla schiena, finalmente ho ritrovato il benessere.",
+    name: "Franca Paggi",
+    text: "La Dottoressa Armellini è la mia salvezza. È molto attenta e professionale, ho fatto con lei la riabilitazione dopo una protesi all'anca. La migliore, consiglio a tutti di andarci!!!",
     rating: 5,
   },
   {
-    name: "Giovanni Bianchi",
-    text: "Esperienza eccellente. Trattamenti mirati ed efficaci che mi hanno permesso di tornare a praticare sport. Consiglio vivamente la Dott.ssa Armellini a chiunque cerchi un professionista serio e preparato.",
-    rating: 5,
-  },
-  {
-    name: "Laura Verdi",
-    text: "Un'approccio olistico che considera la persona nella sua interezza. La Dott.ssa Armellini non si limita a trattare il sintomo, ma cerca di comprendere le cause profonde del problema. Sono molto soddisfatta.",
+    name: "Chiara Antonucci",
+    text: "Ho avuto la fortuna di essere seguita dalla Dr.ssa Armellini sia dopo un intervento chirurgico che per dolori alla schiena che mi tormentavano da anni. La sua professionalità è semplicemente impareggiabile. Fa tantissime domande, ascolta attentamente e si prende davvero il tempo necessario per capire a fondo la situazione prima di procedere con il trattamento. La sua attenzione ai dettagli e la cura con cui gestisce ogni seduta mi hanno fatto sentire sempre in ottime mani. Grazie a lei ho visto miglioramenti concreti che non pensavo fossero possibili. Non andrò mai più da un'altra fisioterapista — la consiglio vivamente a chiunque cerchi competenza, dedizione e risultati reali!",
     rating: 5,
   },
 ];

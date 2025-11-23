@@ -4,13 +4,13 @@ const StatsSection = () => {
   const stats = [
     {
       icon: User,
-      number: "9+",
+      number: "6+",
       description: "Anni di esperienza nel settore della fisioterapia",
     },
     {
       icon: Briefcase,
-      number: "92%+",
-      description: "Tasso di successo nei trattamenti completati",
+      number: "60+",
+      description: "Trattamenti certificati",
     },
     {
       icon: Heart,
