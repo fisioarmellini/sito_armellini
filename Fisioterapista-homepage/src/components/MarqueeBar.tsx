@@ -11,8 +11,8 @@ const MarqueeBar = () => {
     },
     { 
       icon: Phone, 
-      text: "Contattami: +39 392 1780744",
-      href: "tel:+393921780744", // Link per avviare la chiamata
+      text: "Contattami: +39 379 100 9600",
+      href: "tel:+393791009600", // Link per avviare la chiamata
       target: "_self" // Apre nella stessa scheda
     },
   ];

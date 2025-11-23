@@ -41,7 +41,14 @@ const Footer = () => {
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5" />
                 {/* 7. Indirizzo aggiornato */}
-                <span>Via Giuseppe Mercalli 11, Roma Parioli</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Via+Giuseppe+Mercalli+11,+Roma+Parioli" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Via Giuseppe Mercalli 11, Roma Parioli
+                </a>
               </li>
             </ul>
           </div>
